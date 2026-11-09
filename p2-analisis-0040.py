@@ -22,6 +22,17 @@ print("-+-+-+-+-+-+-+-+-+-+-+ muebles maximo -+-+-+-+-+-+-+-+-+-+")
 # Precio_Miles_USD
 print(agrupado['Precio_Miles_USD'].max())
 
-
+print("+-+-+-Hugo Fabian+-+-+-+-+-segunda parte+-+-+-+-+0040-+-+-+-+")
+print("agregacion multiples")
+print("mean--> promedio, sum --> suma ")
+print("max--> maximo, min --> minimo ")
+resultado_agregado = agrupado['Habitaciones'].agg(['mean', 'sum', 'max', 'min'])
+print(resultado_agregado)
+print("agrupacion por varias columnas")
+print("agrega columna al dataframe")
+print("columna teams equipo")
+df['equipo'] = ['A','B','A','B','A','B']
+agrupado_multiple = df.groupby(['Metros_Cuadrados', 'equipo'])['Habitaciones'].mean()
+print(agrupado_multiple)
 
 
